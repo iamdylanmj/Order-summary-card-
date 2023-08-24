@@ -1,0 +1,29 @@
+@use "../util/" as util;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+    background-image: url("../../../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+    background-size:contain;
+    background-color: var(--Pale-blue);
+    height: 100vh;
+    font-family: util.$font;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}

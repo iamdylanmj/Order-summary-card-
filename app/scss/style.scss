@@ -1,0 +1,167 @@
+@forward "./global/";
+
+// main container
+.main-cont {
+  background-color: var(--Very-pale-blue);
+  width: 400px;
+  height: 650px;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+
+  @media screen and (max-width: 375px) {
+    width: 360px;
+    margin: 0 5px;
+  }
+
+  //   hero image container
+  &__img {
+    background-image: url(../images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 35%;
+    width: 100%;
+  }
+
+  //   price plan container
+  &__desc {
+    max-height: 65%;
+    width: 100%;
+    text-align: center;
+
+    &-h {
+      margin-top: 40px;
+      font-weight: 900;
+      color: var(--Dark-blue);
+    }
+    &-p {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      font-weight: 200;
+      color: var(--Desaturated-blue);
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4rem;
+    }
+
+    &-price {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 82%;
+      height: 80px;
+      border-radius: 10px;
+      display: flex;
+
+      &-plan,
+      &-link {
+        width: 50%;
+        max-height: 100%;
+      }
+      &-plan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        figure {
+          width: 120px;
+          height: 100%;
+          background-image: url("../images/icon-music.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          scale: 1.1;
+        }
+        p {
+          line-height: 1.4rem;
+          font-weight: 900;
+          font-size: 0.8rem;
+          color: var(--Dark-blue);
+          span {
+            font-weight: 500;
+            color: var(--Desaturated-blue);
+          }
+        }
+      }
+      //   change plane hyperlink
+      &-link {
+        padding: 0 15px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        a {
+          color: var(--Bright-blue);
+          text-decoration: underline;
+          text-decoration-color: var(--Bright-blue);
+          transition: color 0.2s, text-decoration 0.2s;
+        }
+
+        a:hover {
+          color: var(--Purple-blue);
+          text-decoration: none;
+        }
+      }
+    }
+    // proceed payment button
+    &-btn {
+      margin-top: 30px;
+      width: 85%;
+      padding: 0.8rem 2rem;
+      color: var(--Very-pale-blue);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.01rem;
+      background-color: var(--Bright-blue);
+      transition: background-color 0.2s;
+      border: none;
+      border-radius: 10px;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+      @media screen and (max-width: 375px) {
+        width: 75%;
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+      }
+    }
+    &-btn:hover {
+      background-color: var(--Purple-blue);
+      cursor: pointer;
+    }
+
+    // cancel button
+    &-cancel {
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 30px;
+      color: var(--Desaturated-blue);
+      transition: color 0.2s;
+
+      @media screen and (max-width: 375px) {
+        font-size: 0.98rem;
+        margin-top: 25px;
+      }
+    }
+    &-cancel:hover {
+      color: var(--Dark-blue);
+      cursor: pointer;
+    }
+  }
+}
+
+// developer information section
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
